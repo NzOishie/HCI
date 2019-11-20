@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link href="js/bootstrap.min.js" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+</head>
+<style>
+    .blue{
+        color: blue;
+    }
+    .red{
+        color: darkred;
+    }
+    .margin-top{
+        margin-top: 50pt;
+    }
+    .text-area{
+        height: 200px;
+        width: 100%;
+    }
+    .button-right{
+        float: right;
+    }
+    .button-left{
+        float: left;
+    }
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .width{
+        width: 50%;
+    }
+</style>
+<script>
+function reported() {
+  alert("Successfully Reported!");
+}
+</script>
+<body>
+<div class="container margin-top">
+    <h1 class="red">Report your Bug!</h1>
+    <h4 class="blue">Fix:</h4>
+    <textarea class="text-area">
+        def draw():
+            fill(255)
+            ellipse(x,y,20,20)
+    </textarea>
+     <h4 class="blue">Type of Bug:</h4>
+
+    <div class="radio">
+        <label><input type="radio" checked>Ignorable</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio">Minor</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio">Medium</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio">Major</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio">Severe</label>
+    </div>
+
+    <h4 class="blue">Description:</h4>
+    <textarea class="text-area" ></textarea>
+    <a onclick="reported()" class="btn btn-primary button-right" href="home.html">Report</a>
+<!--    <button class="btn btn-primary button-right" onclick="reported()">Report!</button>-->
+
+  </div>
+</div>
+</body>
+</html>

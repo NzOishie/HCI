@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link href="js/bootstrap.min.js" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+</head>
+<style>
+    .blue{
+        color: blue;
+    }
+    .red{
+        color: red;
+    }
+    .margin-top{
+        margin-top: 50pt;
+    }
+    .text-area{
+        height: 500px;
+        width: 100%;
+    }
+    .button-right{
+        float: right;
+    }
+    .button-left{
+        float: left;
+    }
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .ml_height{
+        height: 250px;
+    }
+    .center-text{
+        text-align: center;
+    }
+</style>
+<script>
+function commit_alert() {
+  alert("Successfully Commited!");
+}
+</script>
+<body>
+<div class="container">
+    <h1 class="blue margin-top">
+        Write your Code..
+    </h1>
+    <textarea class="text-area">
+        def draw():
+            fill(255)
+            ellipse(x,y,20,20)
+    </textarea>
+    <button class="btn btn-primary button-right" data-toggle="modal" data-target="#load_modal">Commit</button>
+    <div class="modal fade center" id="load_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure to commit?</p>
+          <p>Do you think there is any bug in your commit?</p>
+        </div>
+        <div class="modal-footer">
+          <a href="Report.html" class="btn btn-danger button-left">Yes! Fix and Report</a>
+          <button type="button" class="btn btn-primary button-right" data-dismiss="modal" data-toggle="modal" data-target="#load_ml_modal">
+              No,commit!
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div class="modal fade center" id="load_ml_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title red"><b>Applying Machine Learning, it is detected that there are bug(s) in you code!!!</b></h4>
+        </div>
+        <div class="modal-body ml_height ">
+            <h5 class="center-text"><b>Probability:</b> 80%</h5>
+            <h5 class="center-text"><b >Type of bug:</b><span class="red">Major</span> </h5>
+        </div>
+        <div class="modal-footer">
+          <a href="Report.html" class="btn btn-danger button-left">Yes! Fix and Report</a>
+          <button type="button" class="btn btn-primary button-right" data-dismiss="modal" onclick="commit_alert()">
+              Ignore &  commit!
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
